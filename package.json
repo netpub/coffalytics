@@ -1,0 +1,16 @@
+{
+  "name": "coffalytics",
+  "version": "1.0.0",
+  "description": "Coffee Analytics Dashboard - Coffalytics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "1.x",
+    "gulp": "3.9.x",
+    "gulp-sass": "3.x"
+  }
+}

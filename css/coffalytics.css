@@ -1,0 +1,273 @@
+html {
+  color: #222;
+  font-family: 'Roboto',sans-serif;
+  font-size: 13px; }
+
+h2 {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 0; }
+
+header {
+  width: 100%;
+  height: 112px;
+  background: #fafafa;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35); }
+
+.logo {
+  padding-top: 15px; }
+  .logo img {
+    float: left;
+    width: 85px;
+    height: 85px; }
+  .logo .claim {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.54);
+    padding-top: 34px;
+    display: block; }
+  .logo .company {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4); }
+
+.btn-group button.btn {
+  background-image: -webkit-linear-gradient(top, #fefefe, #f3f3f3);
+  background-image: -moz-linear-gradient(top, #fefefe, #f3f3f3);
+  border: 1px solid #ccc; }
+  .btn-group button.btn:focus {
+    outline: none; }
+  .btn-group button.btn.active {
+    background-color: #dfdfdf;
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #dfdfdf);
+    border-color: #ccc;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.3);
+    color: #222; }
+
+.wrapper {
+  padding: 10px 20px; }
+
+.top-bar {
+  position: relative;
+  height: 35px; }
+  .top-bar .daterange-wrap {
+    width: 231px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    border: 1px solid #efefef; }
+    .top-bar .daterange-wrap .arrow-down {
+      position: absolute;
+      right: 0;
+      top: 1px;
+      height: 29px;
+      width: 18px;
+      background: #f7f7f7;
+      border: 0 none;
+      padding: 0;
+      text-align: center; }
+      .top-bar .daterange-wrap .arrow-down:focus {
+        outline: none; }
+      .top-bar .daterange-wrap .arrow-down .fa-caret-up {
+        display: none; }
+      .top-bar .daterange-wrap .arrow-down .fa-caret-down {
+        display: inline-block; }
+    .top-bar .daterange-wrap.open .arrow-down .fa-caret-up {
+      display: inline-block; }
+    .top-bar .daterange-wrap.open .arrow-down .fa-caret-down {
+      display: none; }
+  .top-bar .daterange-input {
+    width: 100%;
+    height: 29px;
+    line-height: 29px;
+    font-size: 19px;
+    border: 0 none; }
+    .top-bar .daterange-input:focus {
+      outline: none; }
+
+.daterangepicker .calendar {
+  max-width: none; }
+
+.daterangepicker .applyBtn {
+  background: #349ac7;
+  border-color: #297b9f; }
+  .daterangepicker .applyBtn:active:hover {
+    background: #297b9f;
+    border-color: #297b9f; }
+
+.daterangepicker .ranges li.active {
+  background: #349ac7;
+  border-color: #297b9f; }
+
+.daterangepicker .input-mini.active {
+  border: 2px solid #349ac7; }
+
+.daterangepicker table.table-condensed {
+  font-size: 10px; }
+  .daterangepicker table.table-condensed td {
+    border-radius: 0;
+    padding: 2px 3px; }
+    .daterangepicker table.table-condensed td.active {
+      background: #349ac7; }
+    .daterangepicker table.table-condensed td.in-range {
+      background: #349ac7;
+      color: #fff; }
+    .daterangepicker table.table-condensed td.start-date, .daterangepicker table.table-condensed td.end-date {
+      border-radius: 0; }
+
+/* LOADER */
+.loader-overlay {
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.loader-center {
+  width: 75px;
+  height: 130px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -37.5px;
+  margin-top: -85px; }
+
+.loader {
+  position: relative;
+  width: 75px;
+  height: 100px; }
+  .loader__bar {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 50%;
+    background: #349ac7;
+    transform-origin: center bottom;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); }
+    .loader__bar:nth-child(1) {
+      left: 0px;
+      transform: scale(1, 0.2);
+      animation: barUp1 4s infinite; }
+    .loader__bar:nth-child(2) {
+      left: 15px;
+      transform: scale(1, 0.4);
+      animation: barUp2 4s infinite; }
+    .loader__bar:nth-child(3) {
+      left: 30px;
+      transform: scale(1, 0.6);
+      animation: barUp3 4s infinite; }
+    .loader__bar:nth-child(4) {
+      left: 45px;
+      transform: scale(1, 0.8);
+      animation: barUp4 4s infinite; }
+    .loader__bar:nth-child(5) {
+      left: 60px;
+      transform: scale(1, 1);
+      animation: barUp5 4s infinite; }
+  .loader__ball {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #349ac7;
+    border-radius: 50%;
+    animation: ball 4s infinite; }
+
+@keyframes ball {
+  0% {
+    transform: translate(0, 0); }
+  5% {
+    transform: translate(8px, -14px); }
+  10% {
+    transform: translate(15px, -10px); }
+  17% {
+    transform: translate(23px, -24px); }
+  20% {
+    transform: translate(30px, -20px); }
+  27% {
+    transform: translate(38px, -34px); }
+  30% {
+    transform: translate(45px, -30px); }
+  37% {
+    transform: translate(53px, -44px); }
+  40% {
+    transform: translate(60px, -40px); }
+  50% {
+    transform: translate(60px, 0); }
+  57% {
+    transform: translate(53px, -14px); }
+  60% {
+    transform: translate(45px, -10px); }
+  67% {
+    transform: translate(37px, -24px); }
+  70% {
+    transform: translate(30px, -20px); }
+  77% {
+    transform: translate(22px, -34px); }
+  80% {
+    transform: translate(15px, -30px); }
+  87% {
+    transform: translate(7px, -44px); }
+  90% {
+    transform: translate(0, -40px); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, 0.2); }
+  40% {
+    transform: scale(1, 0.2); }
+  50% {
+    transform: scale(1, 1); }
+  90% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(1, 0.2); } }
+
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, 0.4); }
+  40% {
+    transform: scale(1, 0.4); }
+  50% {
+    transform: scale(1, 0.8); }
+  90% {
+    transform: scale(1, 0.8); }
+  100% {
+    transform: scale(1, 0.4); } }
+
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, 0.6); }
+  100% {
+    transform: scale(1, 0.6); } }
+
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, 0.8); }
+  40% {
+    transform: scale(1, 0.8); }
+  50% {
+    transform: scale(1, 0.4); }
+  90% {
+    transform: scale(1, 0.4); }
+  100% {
+    transform: scale(1, 0.8); } }
+
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1); }
+  40% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1, 0.2); }
+  90% {
+    transform: scale(1, 0.2); }
+  100% {
+    transform: scale(1, 1); } }

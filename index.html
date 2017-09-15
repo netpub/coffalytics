@@ -1,0 +1,90 @@
+<html>
+<head>
+  <title>NP - Coffee Dashboard</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png; charset=binary">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/coffalytics.css" />
+</head>
+
+<body>
+<header>
+  <div class="logo">
+    <img src="img/coffalytics.png" alt="logo" width="85"/>
+    <span class="claim">Coffalytics</span>
+    <span class="company">made by network.publishing</span>
+  </div>
+</header>
+<div class="wrapper">
+  <div class="top-bar">
+    <h2>Dashboard</h2>
+    <div class="daterange-wrap">
+      <input name="daterange" class="daterange-input" />
+      <button class="arrow-down">
+        <i class="fa fa-caret-down"></i>
+        <i class="fa fa-caret-up"></i>
+      </button>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="coffee-amount-wrapper">
+      Kaffees gesamt: <span class="coffee-amount">0</span>
+    </div>
+    <div class="coffee-amount-wrapper">
+      Meist getrunkener Kaffee gesamt: <span class="most-coffee-amount-date"></span>
+    </div>
+    <div class="range-selector">
+      <div class="btn-group btn-group-sm pull-right" role="group">
+        <button type="button" class="btn range-minute" data-range="minute">Minütlich</button>
+        <button type="button" class="btn range-hour" data-range="hour">Stündlich</button>
+        <button type="button" class="btn range-day" data-range="day">Tag</button>
+        <button type="button" class="btn range-week" data-range="week">Woche</button>
+        <button type="button" class="btn range-month" data-range="month">Monat</button>
+        <button type="button" class="btn range-year" data-range="year">Jahr</button>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div id="chart_div"></div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div id="container_graph_donut"></div>
+      </div>
+      <div class="col-xs-6">
+        <div id="container_graph_by_hour"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loader-overlay">
+  <div class="loader-center">
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
+    <div class="load-text">Lädt</div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+  google.charts.load('current', {'packages':['corechart'], 'language': 'de'});
+</script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/moment/min/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="bower_components/moment-range/dist/moment-range.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="js/coffalytics.js"></script>
+
+</body>
+</html>
